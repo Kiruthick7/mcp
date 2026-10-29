@@ -1,21 +1,16 @@
 {
-    "mcpServers": {
-      "filesystem": {
-        "command": "npx",
-        "args": [
-          "-y",
-          "@modelcontextprotocol/server-filesystem",
-          "/Users/h1598349/Developer/Learning/MCP/MCP-folder"
-        ]
-      },
-      "devto-platform": {
-          "command": "/Users/h1598349/.local/bin/uv",
-          "args": [
-            "--directory",
-            "/Users/h1598349/Developer/Learning/MCP/mcp-server",
-            "run",
-            "dev-server.py"
-          ]
-        }
+  "mcpServers": {
+    "devto-publisher": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/ABSOLUTE/PATH/TO/mcp",
+        "run",
+        "dev-server.py"
+      ],
+      "env": {
+        "DEVTO_API_KEY": "your_devto_api_key_here"
+      }
     }
   }
+}
